@@ -11,11 +11,11 @@ function SignUp() {
     const [habilitado, setHabilitado] = useState(false);
     const navigate = useNavigate();
 
-    const acessMainPage = (event) => {
+    const accessLoginPage = (event) => {
 
         event.preventDefault();
 
-        const URL = `http://localhost:5000/sign-up`;
+        const URL = `http://localhost:5500/sign-up`;
 
         axios
             .post(URL, {
@@ -35,7 +35,7 @@ function SignUp() {
     }
 
     return (
-        <div className="form" onSubmit={acessMainPage}>
+        <div className="form" onSubmit={accessLoginPage}>
             <form>
                 <input type="text" placeholder="Nome" disable={habilitado} value={name} required onChange={(e) => setName(e.target.value)}></input>
                 <input type="email" placeholder="E-mail" disable={habilitado} value={email} required onChange={(e) => setEmail(e.target.value)}></input>
@@ -44,7 +44,7 @@ function SignUp() {
                 <button type="submit" disable={habilitado}>Cadastrar</button>
             </form>
             <Link to={`/`}>
-                <p className="login">Já tem uma conta? Faça login!</p>
+                <p className="login">Já tem uma conta? Entre agora!</p>
             </Link>
         </div>
     )
