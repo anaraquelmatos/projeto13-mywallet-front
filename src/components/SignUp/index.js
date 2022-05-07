@@ -15,7 +15,7 @@ function SignUp() {
 
         event.preventDefault();
 
-        const URL = `http://localhost:5500/sign-up`;
+        const URL = `http://localhost:9000/sign-up`;
 
         axios
             .post(URL, {
@@ -39,8 +39,8 @@ function SignUp() {
             <form>
                 <input type="text" placeholder="Nome" disable={habilitado} value={name} required onChange={(e) => setName(e.target.value)}></input>
                 <input type="email" placeholder="E-mail" disable={habilitado} value={email} required onChange={(e) => setEmail(e.target.value)}></input>
-                <input type="password" placeholder="Senha" disable={habilitado} value={password} required onChange={(e) => setPassword(e.target.value)}></input>
-                <input type="password" placeholder="Confirme a senha" disable={habilitado} value={passwordConfirmation} required onChange={(e) => setPasswordConfirmation(e.target.value)}></input>
+                <input type="password" placeholder="Senha" pattern="[a-zA-Z0-9]{6,10}" title="Digite de 6 a 10 caracteres alfanuméricos." minLength="6" maxLength="10" disable={habilitado} value={password} required onChange={(e) => setPassword(e.target.value)}></input>
+                <input type="password" placeholder="Confirme a senha" pattern="[a-zA-Z0-9]{6,10}" title="Digite de 6 a 10 caracteres alfanuméricos." minLength="6" maxLength="10" disable={habilitado} value={passwordConfirmation} required onChange={(e) => setPasswordConfirmation(e.target.value)}></input>
                 <button type="submit" disable={habilitado}>Cadastrar</button>
             </form>
             <Link to={`/`}>

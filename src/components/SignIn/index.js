@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import "./style.css";
 
 function SignIn() {
 
@@ -14,7 +15,7 @@ function SignIn() {
 
         event.preventDefault();
 
-        const URL = `http://localhost:5500/`;
+        const URL = `http://localhost:9000/`;
 
         axios
             .post(URL, {
@@ -33,15 +34,18 @@ function SignIn() {
     }
 
     return (
-        <div>
-            <form onSubmit={acessMainPage}>
-                <input type="email" placeholder="E-mail" disable={habilitado} value={email} required onChange={(e) => setEmail(e.target.value)}></input>
-                <input type="password" placeholder="Senha" disable={habilitado} value={password} required onChange={(e) => setPassword(e.target.value)}></input>
-                <button disable={habilitado}>Entrar</button>
-            </form>
-            <Link to={`/sign-up`}>
-                <p>Primeira vez? Cadastre-se!</p>
-            </Link>
+        <div className="sign-in">
+            <h1>MyWallet</h1>
+            <div className="form">
+                <form onSubmit={acessMainPage}>
+                    <input type="email" placeholder="E-mail" disable={habilitado} value={email} required onChange={(e) => setEmail(e.target.value)}></input>
+                    <input type="password" placeholder="Senha" pattern="[a-zA-Z0-9]{6,10}" title="Digite de 6 a 10 caracteres alfanuméricos." minLength="6" maxLength="10" disable={habilitado} value={password} required onChange={(e) => setPassword(e.target.value)}></input>
+                    <button disable={habilitado}>Entrar</button>
+                </form>
+                <Link to={`/sign-up`}>
+                    <p>Primeira vez? Cadastre-se!</p>
+                </Link>
+            </div>
         </div>
     );
 }
