@@ -1,0 +1,60 @@
+.sign-up {
+    width: 375px;
+    margin: 95px auto 0;
+}
+
+.sign-up h1 {
+    font-family: 'Saira Stencil One';
+    text-align: center;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 50px;
+    color: #FFFFFF;
+}
+
+.sign-up .form {
+    width: 326px;
+    margin: 24px auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sign-up .form input {
+    width: 326px;
+    height: 58px;
+    margin-bottom: 13px;
+    padding-left: 15px;
+    background: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    color: #000000;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.sign-up .form input::placeholder {
+    color: #000000;
+}
+
+.sign-up .form button {
+    width: 326px;
+    height: 46px;
+    margin-bottom: 36px;
+    background: #A328D6;
+    border: none;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.sign-up .form p {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+}
