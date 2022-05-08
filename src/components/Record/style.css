@@ -1,25 +1,25 @@
-.container {
+.containerRecord {
     width: 326px;
     margin: 25px auto 0;
     display: flex;
     flex-direction: column;
 }
 
-.container .top{
+.containerRecord .top{
     display: flex;
     justify-content: space-between;
     color: #FFFFFF;
     font-size: 30px;
 }
 
-.container h1 {
+.containerRecord h1 {
     font-weight: 700;
     font-size: 26px;
     line-height: 31px;
     color: #FFFFFF;
 }
 
-.container .description {
+.containerRecord .description {
     width: 326px;
     height: 446px;
     margin: 22px auto 0;
@@ -27,7 +27,7 @@
     border-radius: 5px;
 }
 
-.container .description p {
+.containerRecord .description p {
     font-weight: 400;
     font-size: 20px;
     line-height: 23px;
@@ -35,13 +35,13 @@
     color: #868686;
 }
 
-.container .none {
+.containerRecord .none {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.container .financialResources {
+.containerRecord .financialResources {
     width: 326px;
     margin: 13px auto 0;
     display: flex;
@@ -49,14 +49,14 @@
     align-items: center;
 }
 
-.container .financialResources p {
+.containerRecord .financialResources p {
     font-weight: 700;
     font-size: 17px;
     line-height: 20px;
     color: #FFFFFF;
 }
 
-.container .financialResources .addValue {
+.containerRecord .financialResources .addValue {
     width: 155px;
     height: 114px;
     display: flex;
@@ -65,7 +65,7 @@
     border-radius: 5px;
 }
 
-.container .financialResources .subtractValue {
+.containerRecord .financialResources .subtractValue {
     width: 155px;
     height: 114px;
     display: flex;
@@ -74,7 +74,7 @@
     border-radius: 5px;
 }
 
-.container .financialResources .operator {
+.containerRecord .financialResources .operator {
     width: 64px;
     height: 94.44px;
     margin-left: 10px;
