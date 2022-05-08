@@ -8,9 +8,10 @@ import Record from "../Record";
 function App() {
 
     const [user, setUser] = useState(null);
+    const [info, setInfo] = useState({});
 
     return (
-        <UserContext.Provider value={{ user, setUser}}>
+        <UserContext.Provider value={{ user, setUser,info, setInfo}}>
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<SignIn />} />

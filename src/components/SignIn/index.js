@@ -26,8 +26,8 @@ function SignIn() {
             })
 
             .then((response) => {
-                const {data} = response;
-                setUser({token: data});
+                const { data } = response;
+                setUser({ token: data });
                 navigate("/records");
             })
             .catch((err) => {
@@ -38,19 +38,21 @@ function SignIn() {
     }
 
     return (
-        <div className="sign-in">
-            <h1>MyWallet</h1>
-            <div className="form">
-                <form onSubmit={acessMainPage}>
-                    <input type="email" placeholder="E-mail" disable={habilitado} value={email} required onChange={(e) => setEmail(e.target.value)}></input>
-                    <input type="password" placeholder="Senha" pattern="[a-zA-Z0-9]{6,10}" title="Digite de 6 a 10 caracteres alfanuméricos." minLength="6" maxLength="10" disable={habilitado} value={password} required onChange={(e) => setPassword(e.target.value)}></input>
-                    <button disable={habilitado}>Entrar</button>
-                </form>
-                <Link to={`/sign-up`}>
-                    <p>Primeira vez? Cadastre-se!</p>
-                </Link>
+        <main>
+            <div className="sign-in">
+                <h1>MyWallet</h1>
+                <div className="form">
+                    <form onSubmit={acessMainPage}>
+                        <input type="email" placeholder="E-mail" disable={habilitado} value={email} required onChange={(e) => setEmail(e.target.value)}></input>
+                        <input type="password" placeholder="Senha" pattern="[a-zA-Z0-9]{6,10}" title="Digite de 6 a 10 caracteres alfanuméricos." minLength="6" maxLength="10" disable={habilitado} value={password} required onChange={(e) => setPassword(e.target.value)}></input>
+                        <button disable={habilitado}>Entrar</button>
+                    </form>
+                    <Link to={`/sign-up`}>
+                        <p>Primeira vez? Cadastre-se!</p>
+                    </Link>
+                </div>
             </div>
-        </div>
+        </main>
     );
 }
 

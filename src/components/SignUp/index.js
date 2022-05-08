@@ -35,21 +35,23 @@ function SignUp() {
     }
 
     return (
-        <div className="sign-up">
-            <h1>MyWallet</h1>
-            <div className="form">
-                <form onSubmit={accessLoginPage}>
-                    <input type="text" placeholder="Nome" disable={habilitado} value={name} required onChange={(e) => setName(e.target.value)}></input>
-                    <input type="email" placeholder="E-mail" disable={habilitado} value={email} required onChange={(e) => setEmail(e.target.value)}></input>
-                    <input type="password" placeholder="Senha" pattern="[a-zA-Z0-9]{6,10}" title="Digite de 6 a 10 caracteres alfanuméricos." minLength="6" maxLength="10" disable={habilitado} value={password} required onChange={(e) => setPassword(e.target.value)}></input>
-                    <input type="password" placeholder="Confirme a senha" pattern="[a-zA-Z0-9]{6,10}" title="Digite de 6 a 10 caracteres alfanuméricos." minLength="6" maxLength="10" disable={habilitado} value={passwordConfirmation} required onChange={(e) => setPasswordConfirmation(e.target.value)}></input>
-                    <button type="submit" disable={habilitado}>Cadastrar</button>
-                </form>
-                <Link to={`/`}>
-                    <p>Já tem uma conta? Entre agora!</p>
-                </Link>
+        <main>
+            <div className="sign-up">
+                <h1>MyWallet</h1>
+                <div className="form">
+                    <form onSubmit={accessLoginPage}>
+                        <input type="text" placeholder="Nome" disable={habilitado} value={name} required onChange={(e) => setName(e.target.value)}></input>
+                        <input type="email" placeholder="E-mail" disable={habilitado} value={email} required onChange={(e) => setEmail(e.target.value)}></input>
+                        <input type="password" placeholder="Senha" pattern="[a-zA-Z0-9]{6,10}" title="Digite de 6 a 10 caracteres alfanuméricos." minLength="6" maxLength="10" disable={habilitado} value={password} required onChange={(e) => setPassword(e.target.value)}></input>
+                        <input type="password" placeholder="Confirme a senha" pattern="[a-zA-Z0-9]{6,10}" title="Digite de 6 a 10 caracteres alfanuméricos." minLength="6" maxLength="10" disable={habilitado} value={passwordConfirmation} required onChange={(e) => setPasswordConfirmation(e.target.value)}></input>
+                        <button type="submit" disable={habilitado}>Cadastrar</button>
+                    </form>
+                    <Link to={`/`}>
+                        <p>Já tem uma conta? Entre agora!</p>
+                    </Link>
+                </div>
             </div>
-        </div>
+        </main>
     )
 }
 export default SignUp;
