@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import UserContext from "../UserContext";
 import "./style.css";
 
 function SignIn() {
@@ -8,6 +9,7 @@ function SignIn() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [habilitado, setHabilitado] = useState(false);
+    const { setUser } = useContext(UserContext);
 
     const navigate = useNavigate();
 
@@ -23,11 +25,13 @@ function SignIn() {
                 password
             })
 
-            .then(() => {
+            .then((response) => {
+                const {data} = response;
+                setUser({token: data});
                 navigate("/records");
             })
             .catch((err) => {
-                alert(`Erro ${err.response.status}. Usuário não existe ou credenciais erradas!`);
+                alert(` Usuário não existe ou credenciais erradas!`);
                 setHabilitado(false);
             })
 

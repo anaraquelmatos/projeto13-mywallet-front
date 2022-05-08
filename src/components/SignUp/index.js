@@ -46,7 +46,7 @@ function SignUp() {
                     <button type="submit" disable={habilitado}>Cadastrar</button>
                 </form>
                 <Link to={`/`}>
-                    <p className="login">Já tem uma conta? Entre agora!</p>
+                    <p>Já tem uma conta? Entre agora!</p>
                 </Link>
             </div>
         </div>
