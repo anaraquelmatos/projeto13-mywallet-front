@@ -120,7 +120,7 @@ function Records() {
                         }
                     </div>
                     <div className="sum">
-                        <p>SALDO:</p>
+                        <p>SALDO</p>
                         <P colorSum={sumAll}>{sumAll}</P>
                     </div>
                     <div>
