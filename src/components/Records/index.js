@@ -1,4 +1,5 @@
 import { useEffect, useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import "./style.css";
@@ -11,6 +12,7 @@ function Records() {
     const [cont, setCont] = useState();
     const [name, setName] = useState();
     const [sumAll, setSumAll] = useState();
+    const navigate = useNavigate();
 
     useEffect(() => {
         const URL = `http://localhost:9000/records`;
@@ -27,7 +29,23 @@ function Records() {
             });
     }, [cont]);
 
-    /*
+    function deleteToken() {
+
+        const config = {
+            headers: {
+                Authorization: `Bearer ${user.token}`
+            }
+        }
+
+            const URL = `http://localhost:9000/records/${user.token}`
+
+            axios
+                .delete(URL, config)
+                .then(() => {
+                    navigate("/");
+                })
+    }
+/*
         useEffect(() => {
                 let all = 0;
                 info.forEach(k => {
@@ -45,7 +63,9 @@ function Records() {
             <header>
                 <div className="top">
                     <h1>Olá, {name}</h1>
-                    <ion-icon name="exit-outline"></ion-icon>
+                        <div onClick={deleteToken}>
+                            <ion-icon name="exit-outline"></ion-icon>
+                        </div>
                 </div>
             </header>
             <main>
@@ -77,7 +97,11 @@ function Records() {
             <header>
                 <div className="top">
                     <h1>Olá, {name}</h1>
-                    <ion-icon name="exit-outline"></ion-icon>
+                    <Link to={`/`}>
+                        <div>
+                            <ion-icon name="exit-outline"></ion-icon>
+                        </div>
+                    </Link>
                 </div>
             </header>
             <main>
