@@ -26,7 +26,20 @@ function Records() {
                 setInfo([...data.list]);
                 setCont(cont + 1);
                 setName(data.name);
+
+                let all = 0;
+                data.list.forEach(k => {
+                    if (k.operator) {
+                        all += parseFloat(k.value);
+                    } else {
+                        all -= parseFloat(k.value);
+                    }
+
+                })
+
+                setSumAll(all);
             });
+
     }, [cont]);
 
     function deleteToken() {
@@ -37,35 +50,42 @@ function Records() {
             }
         }
 
-            const URL = `http://localhost:9000/records/${user.token}`
+        const URL = `http://localhost:9000/records/${user.token}`
 
-            axios
-                .delete(URL, config)
-                .then(() => {
-                    navigate("/");
-                })
+        axios
+            .delete(URL, config)
+            .then(() => {
+                navigate("/");
+            })
     }
-/*
-        useEffect(() => {
+
+    useEffect(() => {
+        /*
                 let all = 0;
                 info.forEach(k => {
+                    
+                    
                     if (k.operator) {
                         all += parseFloat(k.value);
                     } else {
                         all -= parseFloat(k.value);
                     }
+                    
                 })
-                setSumAll(all);
-        }, [info]);*/
+                
+               setSumAll(all);*/
+
+
+    }, [info]);
 
     return Object.values(info).length === 0 ? (
         <div className="containerRecord">
             <header>
                 <div className="top">
                     <h1>Olá, {name}</h1>
-                        <div onClick={deleteToken}>
-                            <ion-icon name="exit-outline"></ion-icon>
-                        </div>
+                    <div onClick={deleteToken}>
+                        <ion-icon name="exit-outline"></ion-icon>
+                    </div>
                 </div>
             </header>
             <main>
@@ -119,7 +139,7 @@ function Records() {
                     </div>
                     <div className="sum">
                         <p>SALDO:</p>
-                        <p>1234</p>
+                        <p>{sumAll}</p>
                     </div>
                     <div>
                     </div>
