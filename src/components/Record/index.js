@@ -43,12 +43,14 @@ function Record() {
                             </div>
                         </div>
                     </Link>
-                    <div className="subtractValue">
-                        <div className="operator">
-                            <ion-icon name="remove-circle-outline"></ion-icon>
-                            <p>Nova saída</p>
+                    <Link to={`/subtract`}>
+                        <div className="subtractValue">
+                            <div className="operator">
+                                <ion-icon name="remove-circle-outline"></ion-icon>
+                                <p>Nova saída</p>
+                            </div>
                         </div>
-                    </div>
+                    </Link>
                 </div>
             </main>
         </div>
@@ -73,12 +75,14 @@ function Record() {
                             </div>
                         </div>
                     </Link>
-                    <div className="subtractValue">
-                        <div className="operator">
-                            <ion-icon name="remove-circle-outline"></ion-icon>
-                            <p>Nova saída</p>
+                    <Link to={`/subtract`}>
+                        <div className="subtractValue">
+                            <div className="operator">
+                                <ion-icon name="remove-circle-outline"></ion-icon>
+                                <p>Nova saída</p>
+                            </div>
                         </div>
-                    </div>
+                    </Link>
                 </div>
             </main>
         </div>

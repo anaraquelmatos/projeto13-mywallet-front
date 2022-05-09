@@ -8,7 +8,6 @@ function ValueAddition() {
 
     const [value, setValue] = useState("");
     const [description, setDescription] = useState("");
-    // eslint-disable-next-line
     const [habilitado, setHabilitado] = useState(false);
     const navigate = useNavigate();
 
@@ -41,7 +40,6 @@ function ValueAddition() {
                 setHabilitado(false);
             })
     }
-
 
     return (
 

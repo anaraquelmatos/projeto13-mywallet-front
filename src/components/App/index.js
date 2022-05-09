@@ -5,6 +5,7 @@ import SignUp from "../SignUp";
 import SignIn from "../SignIn";
 import Record from "../Record";
 import ValueAddition from "../ValueAddition";
+import ValueSubctration from "../ValueSubtraction";
 
 function App() {
 
@@ -12,13 +13,14 @@ function App() {
     const [info, setInfo] = useState({});
 
     return (
-        <UserContext.Provider value={{ user, setUser,info, setInfo}}>
+        <UserContext.Provider value={{ user, setUser, info, setInfo }}>
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<SignIn />} />
                     <Route path="/sign-up" element={<SignUp />} />
                     <Route path="/records" element={<Record />} />
                     <Route path="/add" element={<ValueAddition />} />
+                    <Route path="/subtract" element={<ValueSubctration />} />
                 </Routes>
             </BrowserRouter>
         </UserContext.Provider>
