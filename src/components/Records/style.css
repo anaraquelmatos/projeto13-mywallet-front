@@ -1,0 +1,109 @@
+.containerRecord {
+    width: 326px;
+    margin: 25px auto 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.containerRecord .top {
+    display: flex;
+    justify-content: space-between;
+    color: #FFFFFF;
+    font-size: 30px;
+}
+
+.containerRecord h1 {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 31px;
+    color: #FFFFFF;
+}
+
+.containerRecord .description {
+    width: 326px;
+    height: 446px;
+    margin: 22px auto 0;
+    background: #FFFFFF;
+    border-radius: 5px;
+}
+
+.containerRecord .description .p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+}
+
+.containerRecord .none {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerRecord .all-description {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.containerRecord .all-description .contain {
+    width: 303px;
+    margin: 23px auto;
+}
+
+.containerRecord .all-description .sum {
+    width: 303px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    left: 12px;
+    top: 410px;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.containerRecord .financialResources {
+    width: 326px;
+    margin: 13px auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.containerRecord .financialResources p {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+
+.containerRecord .financialResources .addValue {
+    width: 155px;
+    height: 114px;
+    display: flex;
+    align-items: center;
+    background: #A328D6;
+    border-radius: 5px;
+}
+
+.containerRecord .financialResources .subtractValue {
+    width: 155px;
+    height: 114px;
+    display: flex;
+    align-items: center;
+    background: #A328D6;
+    border-radius: 5px;
+}
+
+.containerRecord .financialResources .operator {
+    width: 64px;
+    height: 94.44px;
+    margin-left: 10px;
+    color: #FFFFFF;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

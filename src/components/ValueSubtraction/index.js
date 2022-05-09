@@ -49,7 +49,7 @@ function ValueAddition() {
             </header>
             <main>
                 <form onSubmit={saveValue}>
-                    <input type="text" placeholder="Valor" disable={habilitado} pattern="[0-9]+\.[0-9]{2}" title="Digite apenas números e separe-os por ponto. Ex.: 12.00" value={value} required onChange={(e) => setValue(e.target.value)}></input>
+                    <input type="number" placeholder="Valor" disable={habilitado} value={value} required onChange={(e) => setValue(e.target.value)}></input>
                     <input type="text" placeholder="Descrição" disable={habilitado} value={description} required onChange={(e) => setDescription(e.target.value)}></input>
                     <button type="submit" disable={habilitado}>Salvar saída</button>
                 </form>
