@@ -8,14 +8,14 @@ function Record({ description, value, day, operator }) {
             <p className="description-record-day">{day}</p>
             <p className="description-record">{description}</p>
             <div className="day">
-                <P cor={operator}>{value}</P>
+                <P color={operator}>{value}</P>
             </div>
         </div>
     );
 }
 
 const P = styled.p`
-    color: ${props => props.cor ? "#03AC00" : "#C70000"};
+    color: ${props => props.color ? "#03AC00" : "#C70000"};
     font-weight: 400;
     font-size: 20px;
     line-height: 23px;

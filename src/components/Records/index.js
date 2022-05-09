@@ -5,6 +5,7 @@ import axios from "axios";
 import "./style.css";
 import UserContext from "../UserContext";
 import Record from "../Record";
+import styled from "styled-components";
 
 function Records() {
 
@@ -36,7 +37,7 @@ function Records() {
                     }
 
                 })
-
+                all.toFixed();
                 setSumAll(all);
             });
 
@@ -58,25 +59,6 @@ function Records() {
                 navigate("/");
             })
     }
-
-    useEffect(() => {
-        /*
-                let all = 0;
-                info.forEach(k => {
-                    
-                    
-                    if (k.operator) {
-                        all += parseFloat(k.value);
-                    } else {
-                        all -= parseFloat(k.value);
-                    }
-                    
-                })
-                
-               setSumAll(all);*/
-
-
-    }, [info]);
 
     return Object.values(info).length === 0 ? (
         <div className="containerRecord">
@@ -139,7 +121,7 @@ function Records() {
                     </div>
                     <div className="sum">
                         <p>SALDO:</p>
-                        <p>{sumAll}</p>
+                        <P colorSum={sumAll}>{sumAll}</P>
                     </div>
                     <div>
                     </div>
@@ -166,5 +148,14 @@ function Records() {
         </div>
     );
 }
+
+const P = styled.p`
+    color: ${props => props.colorSum > 0 ? "#03AC00" : "#C70000"};
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+`
+
 
 export default Records;
