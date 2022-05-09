@@ -18,10 +18,8 @@ function Record() {
             .then((response) => {
                 const { data } = response;
                 setUser({ ...data, token: user.token });
-                console.log(data);
                 setInfo(data);
             });
-        // eslint-disable-next-line
     }, []);
 
     return info.records === null ? (
