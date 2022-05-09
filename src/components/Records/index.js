@@ -37,8 +37,8 @@ function Records() {
                     }
 
                 })
-                all.toFixed();
-                setSumAll(all);
+                setSumAll(all.toFixed(2));
+                
             });
 
     }, [cont]);
