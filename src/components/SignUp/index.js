@@ -15,7 +15,7 @@ function SignUp() {
 
         event.preventDefault();
 
-        const URL = `http://localhost:9000/sign-up`;
+        const URL = `https://projeto-development.herokuapp.com/sign-up`;
 
         axios
             .post(URL, {

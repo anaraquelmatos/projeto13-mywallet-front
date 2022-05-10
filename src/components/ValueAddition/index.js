@@ -17,7 +17,7 @@ function ValueAddition() {
 
         event.preventDefault();
 
-        const URL = `http://localhost:9000/records`;
+        const URL = `https://projeto-development.herokuapp.com/records`;
 
         const config = {
             headers: {

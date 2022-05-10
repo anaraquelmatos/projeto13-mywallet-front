@@ -16,7 +16,7 @@ function Records() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        const URL = `http://localhost:9000/records`;
+        const URL = `https://projeto-development.herokuapp.com/records`;
         const config = {
             headers: { Authorization: `Bearer ${user.token}` }
         };
@@ -51,7 +51,7 @@ function Records() {
             }
         }
 
-        const URL = `http://localhost:9000/records/${user.token}`
+        const URL = `https://projeto-development.herokuapp.com/records/${user.token}`
 
         axios
             .delete(URL, config)
