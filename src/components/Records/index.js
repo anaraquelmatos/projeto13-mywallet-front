@@ -9,7 +9,7 @@ import styled from "styled-components";
 
 function Records() {
 
-    const { user, info, setInfo } = useContext(UserContext);
+    const { user, setUser, info, setInfo } = useContext(UserContext);
     const [cont, setCont] = useState();
     const [name, setName] = useState();
     const [sumAll, setSumAll] = useState();
@@ -37,8 +37,8 @@ function Records() {
                     }
 
                 })
-                setSumAll(all.toFixed(2));
-                
+                setSumAll(all.toFixed(2).replace(".", ","));
+
             });
 
     }, [cont]);
@@ -56,6 +56,7 @@ function Records() {
         axios
             .delete(URL, config)
             .then(() => {
+                setUser(null);
                 navigate("/");
             })
     }
@@ -99,11 +100,9 @@ function Records() {
             <header>
                 <div className="top">
                     <h1>Olá, {name}</h1>
-                    <Link to={`/`}>
-                        <div>
-                            <ion-icon name="exit-outline"></ion-icon>
-                        </div>
-                    </Link>
+                    <div onClick={deleteToken}>
+                        <ion-icon name="exit-outline"></ion-icon>
+                    </div>
                 </div>
             </header>
             <main>

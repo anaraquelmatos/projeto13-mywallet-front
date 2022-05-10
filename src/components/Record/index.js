@@ -8,7 +8,7 @@ function Record({ description, value, day, operator }) {
             <p className="description-record-day">{day}</p>
             <p className="description-record">{description}</p>
             <div className="day">
-                <P color={operator}>{value}</P>
+                <P color={operator}>{(value).replace(".", ",")}</P>
             </div>
         </div>
     );
