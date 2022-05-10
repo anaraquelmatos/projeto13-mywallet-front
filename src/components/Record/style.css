@@ -1,13 +1,14 @@
 .record{
+    width: 300px;
     display: flex;
-    position: relative;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 15px;
 }
 
-.record .day{
+.record .record-together{
+    width: 200px;
     display: flex;
-    position: absolute;
-    left: 255px;
 }
 
 .record .description-record-day {
@@ -19,7 +20,6 @@
 }
 
 .record .description-record {
-    padding-right: 150px;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;

@@ -5,8 +5,10 @@ function Record({ description, value, day, operator }) {
 
     return (
         <div className="record">
-            <p className="description-record-day">{day}</p>
-            <p className="description-record">{description}</p>
+            <div className="record-together">
+                <p className="description-record-day">{day}</p>
+                <p className="description-record">{description}</p>
+            </div>
             <div className="day">
                 <P color={operator}>{(value).replace(".", ",")}</P>
             </div>
