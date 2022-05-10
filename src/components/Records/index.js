@@ -12,7 +12,7 @@ function Records() {
     const { user, setUser, info, setInfo } = useContext(UserContext);
     const [cont, setCont] = useState();
     const [name, setName] = useState();
-    const [sumAll, setSumAll] = useState();
+    const [sumAll, setSumAll] = useState(0);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -37,9 +37,9 @@ function Records() {
                     }
 
                 })
-                setSumAll(all.toFixed(2).replace(".", ","));
-
+                setSumAll(all.toFixed(2));
             });
+
 
     }, [cont]);
 
